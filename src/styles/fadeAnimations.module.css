@@ -12,3 +12,32 @@
     transform: translateY(0);
   }
 }
+
+/* fadeAnimations.module.css */
+
+.animate_on_scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate_on_scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dirección personalizada */
+.from_right {
+  transform: translateX(50px);
+}
+
+.from_left {
+  transform: translateX(-50px);
+}
+
+.from_right.show,
+.from_left.show {
+  transform: translateX(0);
+  opacity: 1;
+}

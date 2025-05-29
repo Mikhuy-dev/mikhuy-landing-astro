@@ -1,4 +1,5 @@
 ---
+import LenisScroll from "../components/lenis/LenisScroll";
 import "../styles/global.css";
 ---
 
@@ -20,7 +21,7 @@ import "../styles/global.css";
     <title>Mikhuy | Gestor de Cafetines Universitarios</title>
   </head>
   <body class="min-h-screen bg-white text-gray-900 scroll-smooth">
+    <LenisScroll client:load />
     <slot />
-    <script type="module" src="/scripts/init-lenis.js"></script>
   </body>
 </html>

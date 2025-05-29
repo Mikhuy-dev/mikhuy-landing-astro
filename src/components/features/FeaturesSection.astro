@@ -6,10 +6,10 @@ import styles from "../../styles/fadeAnimations.module.css";
 <section id="caracteristicas" class="py-16 md:py-24 bg-gray-50">
   <div class="container mx-auto px-4">
     <div class={`text-center mb-16 ${styles.fadeInUp}`}>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">
+      <h2 class={`text-3xl md:text-4xl font-bold mb-4 text-black`}>
         Características Principales
       </h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      <p class={`text-lg text-gray-600 max-w-3xl mx-auto`}>
         Nuestro sistema ofrece todas las herramientas necesarias para
         administrar eficientemente los cafetines universitarios.
       </p>
@@ -21,7 +21,7 @@ import styles from "../../styles/fadeAnimations.module.css";
           const Icon = feature.icon;
           return (
             <div
-              class={`bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow ${styles.fadeInUp}`}
+              class={`bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow`}
               style={`animation-delay: ${index * 0.1 + 0.2}s`}
             >
               <div class="mb-4 text-5xl">
