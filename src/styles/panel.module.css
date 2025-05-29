@@ -1,0 +1,8 @@
+.wrapperMask{
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),  /* Arriba completamente visible */
+        rgba(0, 0, 0, 1) 60%,  /* Mantiene visible una gran parte */
+        rgba(0, 0, 0, 0) 100%  /* Se desvanece hacia abajo */
+    );
+}

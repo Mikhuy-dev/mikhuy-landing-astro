@@ -1,0 +1,104 @@
+---
+import Image from "astro/components/Image.astro";
+import MiMenu from "../../assets/icons/mono-icons/MiMenu.astro";
+import MiClose from "../../assets/icons/mono-icons/MiClose.astro";
+---
+
+<header class="border-b border-slate-400/50 backdrop-blur-md">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <Image
+        src="/mikhuy_icon.webp"
+        alt="Mikhuy Logo"
+        width="50"
+        height="50"
+        class="object-contain"
+        loading="eager"
+      />
+      <span class="font-bold text-2xl text-black">Mikhuy</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6">
+      <a
+        href="#caracteristicas"
+        class="text-gray-700 hover:text-gray-900 transition-colors"
+        >Características</a
+      >
+      <a
+        href="#como-funciona"
+        class="text-gray-700 hover:text-gray-900 transition-colors"
+        >Cómo Funciona</a
+      >
+      <a
+        href="#panel"
+        class="text-gray-700 hover:text-gray-900 transition-colors">Dashboard</a
+      >
+      <a
+        href="#contacto"
+        class="text-gray-700 hover:text-gray-900 transition-colors">Contacto</a
+      >
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-gray-700" id="menu-toggle">
+      <span id="menu-icon" class="text-3xl cursor-pointer"><MiMenu /></span>
+      <span id="menu-close" class="text-3xl cursor-pointer hidden"
+        ><MiClose /></span
+      >
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white border-t border-gray-200"
+  >
+    <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+      <a
+        href="#caracteristicas"
+        class="text-gray-700 hover:text-gray-900 transition-colors"
+        >Características</a
+      >
+      <a
+        href="#como-funciona"
+        class="text-gray-700 hover:text-gray-900 transition-colors"
+        >Cómo Funciona</a
+      >
+      <a
+        href="#panel"
+        class="text-gray-700 hover:text-gray-900 transition-colors">Dashboard</a
+      >
+      <a
+        href="#contacto"
+        class="text-gray-700 hover:text-gray-900 transition-colors">Contacto</a
+      >
+    </div>
+  </div>
+</header>
+
+<script type="module">
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const links = document.querySelectorAll(".mobile-link");
+  const menuOpenIcon = document.getElementById("menu-open");
+  const menuCloseIcon = document.getElementById("menu-close");
+
+  let open = false;
+
+  function toggleMenu() {
+    window.requestAnimationFrame(() => {
+      open = !open;
+      menu.classList.toggle("hidden");
+      menuOpenIcon.classList.toggle("hidden", open);
+      menuCloseIcon.classList.toggle("hidden", !open);
+    });
+  }
+  toggle.addEventListener("click", toggleMenu);
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (open) toggleMenu();
+    });
+  });
+</script>

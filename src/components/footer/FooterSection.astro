@@ -1,0 +1,94 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<footer class="bg-black text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <Image
+            src="/mikhuy_logo.webp"
+            alt="Mikhuy Logo"
+            width={40}
+            height={40}
+            priority
+            sizes="(max-width: 768px) 100vw, 200px"
+            class="object-contain"
+          />
+          <span class="font-bold text-xl">Mikhuy</span>
+        </div>
+        <p class="text-gray-400">
+          Sistema integral de gestión para cafetines universitarios.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Enlaces</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="#caracteristicas"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              Características
+            </a>
+          </li>
+          <li>
+            <a
+              href="#como-funciona"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              Cómo Funciona
+            </a>
+          </li>
+          <li>
+            <a
+              href="#dashboard"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Contacto</h3>
+        <ul class="space-y-2">
+          <li class="text-gray-400">info@mikhuy.com</li>
+          <li class="text-gray-400">Piura, Perú</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-4">Suscríbete</h3>
+        <p class="text-gray-400 mb-4">
+          Recibe nuestras novedades y actualizaciones.
+        </p>
+        <div class="flex">
+          <input
+            type="email"
+            placeholder="Tu email"
+            class="px-4 py-2 bg-black text-white border border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          />
+          <button
+            class="px-4 py-2 bg-white text-black cursor-pointer rounded-r-md hover:bg-gray-600 transition-colors"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+      <p>
+        © {new Date().getFullYear()} Mikhuy. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>

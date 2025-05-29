@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import FeaturesSection from "../components/features/FeaturesSection.astro";
+import FooterSection from "../components/footer/FooterSection.astro";
+import HeaderSection from "../components/header/HeaderSection.astro";
+import HeroSection from "../components/hero/HeroSection.astro";
+import HowItWorksSection from "../components/how-it-works/HowItWorksSection.astro";
+import IntegrateModulesSection from "../components/integrate-modules/IntegrateModulesSection.astro";
+import IphoneSection from "../components/iphone/IphoneSection.astro";
+import { MascotSection } from "../components/mascot/MascotSection";
+import MobileSection from "../components/mobile/MobileSection.tsx";
+import PanelSection from "../components/panel/PanelSection.astro";
+import ContactForm from "../components/contact-form/ContactForm.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <HeaderSection />
+  <HeroSection />
+  <FeaturesSection />
+  <HowItWorksSection />
+  <MascotSection client:visible />
+  <IntegrateModulesSection />
+  <PanelSection />
+  <IphoneSection />
+  <MobileSection client:only="react"/>
+  <ContactForm />
+  <FooterSection />
 </Layout>

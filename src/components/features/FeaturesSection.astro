@@ -1,0 +1,38 @@
+---
+import { features } from "../../const/features";
+import styles from "../../styles/fadeAnimations.module.css";
+---
+
+<section id="caracteristicas" class="py-16 md:py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class={`text-center mb-16 ${styles.fadeInUp}`}>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">
+        Características Principales
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Nuestro sistema ofrece todas las herramientas necesarias para
+        administrar eficientemente los cafetines universitarios.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {
+        features.map((feature, index) => {
+          const Icon = feature.icon;
+          return (
+            <div
+              class={`bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow ${styles.fadeInUp}`}
+              style={`animation-delay: ${index * 0.1 + 0.2}s`}
+            >
+              <div class="mb-4 text-5xl">
+                <Icon class="w-10 h-10 text-gray-700" />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-black">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

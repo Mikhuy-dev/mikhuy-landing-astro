@@ -1,0 +1,114 @@
+.leaves {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  perspective: 100rem;
+}
+
+.leaves div {
+  position: absolute;
+  width: 2rem; /* Tamaño aún más reducido */
+  height: 3rem; /* Tamaño aún más reducido */
+  background-color: rgb(205, 126, 6);
+  border-radius: 20rem 0;
+  overflow: hidden;
+}
+
+@keyframes leafAnim {
+  0% {
+    right: -10rem;
+    transform: rotateZ(0) translateZ(0);
+  }
+  100% {
+    right: 200rem;
+    transform: rotateZ(360deg) translateZ(-150rem);
+  }
+}
+
+.leaves div:nth-child(1) {
+  top: -5rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 10s infinite linear;
+}
+
+.leaves div:nth-child(2) {
+  top: 0rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 6s infinite linear;
+}
+
+.leaves div:nth-child(3) {
+  top: 5rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 4s infinite ease-in;
+}
+
+.leaves div:nth-child(4) {
+  top: 15rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 8s infinite linear;
+}
+
+.leaves div:nth-child(5) {
+  top: 20rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 3s infinite linear;
+}
+
+.leaves div:nth-child(6) {
+  top: 25rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 11s infinite linear;
+}
+
+.leaves div:nth-child(7) {
+  top: 22rem; /* Ajustar posición hacia arriba */
+  animation: leafAnim 12s infinite ease-in-out;
+}
+
+.leaves div::before {
+  content: "";
+  width: 0.1rem;
+  height: 120%;
+  background-color: rgb(241, 223, 86);
+  position: absolute;
+  bottom: 0;
+  transform: rotateZ(30deg);
+  transform-origin: bottom;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgb(128, 92, 0);
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px) translateX(0);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fadeInUpDelay {
+  opacity: 0;
+  transform: translateY(30px) translateX(0);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.fadeInUpText {
+  opacity: 0;
+  transform: translateY(100%) translateX(-20px);
+  animation: fadeInUpText 0.6s ease-out forwards;
+}
+
+.fadeInUpTextDelay {
+  opacity: 0;
+  transform: translateY(100%) translateX(-20px);
+  animation: fadeInUpText 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes fadeInUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
