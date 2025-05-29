@@ -11,7 +11,10 @@ import BsThreeDotsVertical from "../../assets/icons/bootstrap-icons/BsThreeDotsV
 import Image from "astro/components/Image.astro";
 ---
 
-<section id="panel" class={`py-16 md:py-24 bg-gray-100 ${style.wrapperMask}`}>
+<section
+  id="panel"
+  class={`py-16 md:py-24 bg-gray-100 ${style.wrapperMask} overflow-hidden`}
+>
   <div class="container mx-auto px-4">
     <div class={`text-center mb-16 ${animations.fadeInUp}`}>
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">
@@ -106,6 +109,7 @@ import Image from "astro/components/Image.astro";
                 alt="Mikhuy profile"
                 width="56"
                 height="56"
+                loading="lazy"
               />
               <div class="flex flex-col items-start">
                 <p class="font-semibold text-black/80 text-xs md:text-md">
@@ -156,7 +160,7 @@ import Image from "astro/components/Image.astro";
             </div>
 
             <div
-              class="overflow-auto rounded-lg shadow max-h-[calc(100vh-250px)]"
+              class="overflow-hidden rounded-lg shadow max-h-[calc(100vh-250px)]"
             >
               <table
                 class="min-w-full divide-y divide-gray-200 border border-gray-300 text-sm"
@@ -200,6 +204,7 @@ import Image from "astro/components/Image.astro";
                             width="50"
                             height="50"
                             class="rounded-md"
+                            loading="lazy"
                           />
                         </td>
                         <td class="px-4 py-3 whitespace-nowrap">{p.name}</td>
@@ -211,7 +216,10 @@ import Image from "astro/components/Image.astro";
                         </td>
                         <td class="px-4 py-3 whitespace-nowrap">{p.expiry}</td>
                         <td class="px-4 py-3 text-center whitespace-nowrap">
-                          <button class="text-xl hover:text-gray-600 transition">
+                          <button
+                            aria-label={`Actions ${p.name}`}
+                            class="text-xl hover:text-gray-600 transition"
+                          >
                             <BsThreeDotsVertical />
                           </button>
                         </td>
@@ -231,7 +239,7 @@ import Image from "astro/components/Image.astro";
                 > productos
               </p>
               <div class="flex gap-2 items-center mt-2 sm:mt-0">
-                <button disabled class="p-2 border rounded opacity-50">
+                <button aria-label="Disabled Button" disabled class="p-2 border rounded opacity-50">
                   <svg
                     fill="currentColor"
                     viewBox="0 0 512 512"
@@ -243,7 +251,7 @@ import Image from "astro/components/Image.astro";
                   </svg>
                 </button>
                 <span>Página 1 de 1</span>
-                <button disabled class="p-2 border rounded opacity-50">
+                <button aria-label="Disabled Button" disabled class="p-2 border rounded opacity-50">
                   <svg
                     fill="currentColor"
                     viewBox="0 0 512 512"

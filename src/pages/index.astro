@@ -7,10 +7,10 @@ import HowItWorksSection from "../components/how-it-works/HowItWorksSection.astr
 import IntegrateModulesSection from "../components/integrate-modules/IntegrateModulesSection.astro";
 import IphoneSection from "../components/iphone/IphoneSection.astro";
 import { MascotSection } from "../components/mascot/MascotSection";
-import MobileSection from "../components/mobile/MobileSection.tsx";
 import PanelSection from "../components/panel/PanelSection.astro";
 import ContactForm from "../components/contact-form/ContactForm.astro";
 import Layout from "../layouts/Layout.astro";
+import LettersScroll from "../components/letters-scroll/LettersScroll.astro";
 ---
 
 <Layout>
@@ -22,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
   <IntegrateModulesSection />
   <PanelSection />
   <IphoneSection />
-  <MobileSection client:only="react"/>
+  <LettersScroll />
   <ContactForm />
   <FooterSection />
 </Layout>

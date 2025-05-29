@@ -131,16 +131,16 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       <path
         d={pathD}
         stroke={pathColor}
-        strokeWidth={pathWidth}
+        stroke-width={pathWidth}
         strokeOpacity={pathOpacity}
-        strokeLinecap="round"
+        stroke-linecap="round"
       />
       <path
         d={pathD}
-        strokeWidth={pathWidth}
+        stroke-width={pathWidth}
         stroke={`url(#${id})`}
         strokeOpacity="1"
-        strokeLinecap="round"
+        stroke-linecap="round"
       />
       <defs>
         <motion.linearGradient

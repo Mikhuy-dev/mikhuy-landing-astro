@@ -31,7 +31,7 @@ export function MascotSection() {
         borderTopLeftRadius,
         borderTopRightRadius,
       }}
-      className="origin-top py-16 md:py-24 bg-radial from-[#FCB166] from-40% to-[#FFFCD7] rounded-t-full transition-transform"
+      className="origin-top py-16 md:py-24 bg-radial from-[#FCB166] from-40% to-[#FFFCD7] transition-transform"
     >
       <div className="container mx-auto px-4">
         <motion.div
@@ -55,7 +55,7 @@ export function MascotSection() {
           {/* Imagen de letras superpuesta con animación */}
           <motion.div style={{ scale, opacity }} className="absolute z-20">
             <img
-              src="/mikhuy_letters.png"
+              src="/mikhuy_letters.webp"
               alt="Texto Mikhuy"
               width={200}
               height={150}
