@@ -15,13 +15,13 @@ export function MascotSection() {
   const borderTopLeftRadius = useTransform(
     scrollYProgress,
     [0, 0.2, 0.5, 0.8, 1],
-    ["9999px", "500px", "100px", "500px", "9999px"]
+    ["9999px", "500px", "0px", "500px", "9999px"]
   );
 
   const borderTopRightRadius = useTransform(
     scrollYProgress,
     [0, 0.2, 0.5, 0.8, 1],
-    ["9999px", "500px", "100px", "500px", "9999px"]
+    ["9999px", "500px", "0px", "500px", "9999px"]
   );
 
   return (
