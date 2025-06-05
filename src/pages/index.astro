@@ -11,6 +11,7 @@ import PanelSection from "../components/panel/PanelSection.astro";
 import ContactForm from "../components/contact-form/ContactForm.astro";
 import Layout from "../layouts/Layout.astro";
 import LettersScroll from "../components/letters-scroll/LettersScroll.astro";
+import ScrollSection from "../components/scroll-section/ScrollSection.astro";
 ---
 
 <Layout>
@@ -18,7 +19,8 @@ import LettersScroll from "../components/letters-scroll/LettersScroll.astro";
   <HeroSection />
   <FeaturesSection />
   <HowItWorksSection />
-  <MascotSection client:visible />
+  <!-- <MascotSection client:visible /> -->
+  <ScrollSection />
   <IntegrateModulesSection />
   <PanelSection />
   <IphoneSection />

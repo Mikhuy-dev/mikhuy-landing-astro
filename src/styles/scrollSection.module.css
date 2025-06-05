@@ -1,0 +1,119 @@
+.hero div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.hero div h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.2rem;
+  line-height: 0.8;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero_img_container,
+.hero_img_container img,
+.fade_overlay {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero_img_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero_img_copy {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  will-change: opacity;
+}
+
+.hero_img_copy p {
+  font-size: 0.65rem;
+}
+
+.fade_overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  will-change: opacity;
+}
+
+.overlay {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  transform-origin: center 15%;
+  width: 100%;
+  height: 200%;
+  z-index: 30;
+}
+
+.logo_container {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 240px;
+  z-index: 40;
+}
+
+.overlay_copy {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 40;
+}
+
+.overlay_copy h1 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform-origin: center 0%;
+}
+
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero div img {
+    object-fit: cover;
+  }
+  .hero div h1 {
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
+
+  .hero div p {
+    font-size: 1rem;
+  }
+
+  .overlay_copy {
+    width: 100%;
+  }
+}
