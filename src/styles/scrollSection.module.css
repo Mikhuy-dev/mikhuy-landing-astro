@@ -3,7 +3,7 @@
   height: 100%;
   object-fit: contain;
 }
-.hero div h1 {
+.hero div h2 {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
@@ -48,7 +48,13 @@
 }
 
 .hero_img_copy p {
-  font-size: 0.65rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
 
 .fade_overlay {
@@ -86,7 +92,7 @@
   z-index: 40;
 }
 
-.overlay_copy h1 {
+.overlay_copy h2 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -104,7 +110,7 @@
   .hero div img {
     object-fit: cover;
   }
-  .hero div h1 {
+  .hero div h2 {
     font-size: 3rem;
     letter-spacing: 0;
   }

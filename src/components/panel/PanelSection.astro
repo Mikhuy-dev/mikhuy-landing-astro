@@ -38,6 +38,8 @@ import Image from "astro/components/Image.astro";
                 width="40"
                 height="40"
                 alt="mikhuy icon"
+                title={"Mikhuy Icon"}
+                loading={"lazy"}
               />
               <h2 class="text-mikhuy text-3xl exo2-italic italic font-bold">
                 MIKHUY
@@ -53,6 +55,8 @@ import Image from "astro/components/Image.astro";
               <li>
                 <a
                   href="#"
+                  aria-label="Dashboard"
+                  title="Dashboard"
                   class="flex items-center px-4 py-2 rounded text-black hover:bg-black hover:text-white transition-all duration-200"
                 >
                   <FaHome class="mr-2" />
@@ -62,6 +66,8 @@ import Image from "astro/components/Image.astro";
               <li>
                 <a
                   href="#"
+                  aria-label="Almacén"
+                  title="Almacén"
                   class="flex items-center px-4 py-2 rounded bg-black text-white hover:bg-black hover:text-white transition-all duration-200"
                 >
                   <FaBoxOpen class="mr-2" />
@@ -71,6 +77,8 @@ import Image from "astro/components/Image.astro";
               <li>
                 <a
                   href="#"
+                  aria-label="Pedidos"
+                  title="Pedidos"
                   class="flex items-center px-4 py-2 rounded text-black hover:bg-black hover:text-white transition-all duration-200"
                 >
                   <FaShoppingCart class="mr-2" />
@@ -80,6 +88,8 @@ import Image from "astro/components/Image.astro";
               <li>
                 <a
                   href="#"
+                  aria-label="Productos"
+                  title="Productos"
                   class="flex items-center px-4 py-2 rounded text-black hover:bg-black hover:text-white transition-all duration-200"
                 >
                   <IoGrid class="mr-2" />
@@ -89,6 +99,8 @@ import Image from "astro/components/Image.astro";
               <li>
                 <a
                   href="#"
+                  aria-label="Categorias"
+                  title="Categorias"
                   class="flex items-center px-4 py-2 rounded text-black hover:bg-black hover:text-white transition-all duration-200"
                 >
                   <FaList class="mr-2" />
@@ -102,11 +114,14 @@ import Image from "astro/components/Image.astro";
 
           <div class="mb-2 mt-2 flex items-center justify-center">
             <button
+              aria-label="Mikhuy Profile"
+              title="Mikhuy Profile"
               class="text-black rounded-3xl flex items-center gap-3 outline-none px-3 py-2 hover:bg-gray-50 transition-all duration-200 cursor-pointer"
             >
               <Image
                 src="/mikhuy_icon.webp"
                 alt="Mikhuy profile"
+                title="Mikhuy profile"
                 width="56"
                 height="56"
                 loading="lazy"
@@ -148,6 +163,8 @@ import Image from "astro/components/Image.astro";
                 />
               </div>
               <button
+                aria-label="Filter Products"
+                title="Filter Products"
                 class="flex items-center gap-2 px-4 py-2 bg-black text-white rounded hover:bg-black/80 transition-all duration-200"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
@@ -201,6 +218,7 @@ import Image from "astro/components/Image.astro";
                           <Image
                             src={p.image}
                             alt={p.name}
+                            title={p.name}
                             width="50"
                             height="50"
                             class="rounded-md"
@@ -217,6 +235,7 @@ import Image from "astro/components/Image.astro";
                         <td class="px-4 py-3 whitespace-nowrap">{p.expiry}</td>
                         <td class="px-4 py-3 text-center whitespace-nowrap">
                           <button
+                            title="Acciones"
                             aria-label={`Actions ${p.name}`}
                             class="text-xl hover:text-gray-600 transition"
                           >
@@ -239,7 +258,12 @@ import Image from "astro/components/Image.astro";
                 > productos
               </p>
               <div class="flex gap-2 items-center mt-2 sm:mt-0">
-                <button aria-label="Disabled Button" disabled class="p-2 border rounded opacity-50">
+                <button
+                  aria-label="Disabled Button"
+                  title="Disabled Button"
+                  disabled
+                  class="p-2 border rounded opacity-50"
+                >
                   <svg
                     fill="currentColor"
                     viewBox="0 0 512 512"
@@ -251,7 +275,12 @@ import Image from "astro/components/Image.astro";
                   </svg>
                 </button>
                 <span>Página 1 de 1</span>
-                <button aria-label="Disabled Button" disabled class="p-2 border rounded opacity-50">
+                <button
+                  aria-label="Disabled Button"
+                  title="Disabled Button"
+                  disabled
+                  class="p-2 border rounded opacity-50"
+                >
                   <svg
                     fill="currentColor"
                     viewBox="0 0 512 512"

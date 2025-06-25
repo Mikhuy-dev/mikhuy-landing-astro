@@ -20,6 +20,7 @@ import Image from "astro/components/Image.astro";
       <Image
         src="/mikhuy_extended_bg.webp"
         alt="mikhuy background"
+        title="Mikhuy Background"
         width={1920}
         height={1080}
         loading={"lazy"}
@@ -30,7 +31,9 @@ import Image from "astro/components/Image.astro";
       </div>
 
       <!-- <img src="/mikhuy_no_bg.png" alt="gta vi no bg" /> -->
-      <div id="hero_img_copy" class={`${style.hero_img_copy}`}></div>
+      <div id="hero_img_copy" class={`${style.hero_img_copy} text-4xl`}>
+        <p>¡Haz scroll para abajo para revelar!</p>
+      </div>
     </div>
     <div id="fade_overlay" class={`${style.fade_overlay}`}></div>
 
@@ -52,11 +55,11 @@ import Image from "astro/components/Image.astro";
     <div id="logo_container" class={`${style.logo_container}`}></div>
 
     <div id="overlay_copy" class={`${style.overlay_copy}`}>
-      <h1 id="h1Text">
+      <h2 id="h1Text">
         Transforma <br />
         Tu <br />
         Cafetín
-      </h1>
+      </h2>
     </div>
   </section>
 </section>
