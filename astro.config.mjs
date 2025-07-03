@@ -9,7 +9,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  site: "https://mikhuy-ld.netlify.app/",
+  site: "https://mikhuy-landing.netlify.app/",
   adapter: netlify(),
   vite: {
     plugins: [tailwindcss()],
