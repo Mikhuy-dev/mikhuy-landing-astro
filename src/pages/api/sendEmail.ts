@@ -75,6 +75,19 @@ export async function POST({ request }: { request: Request }) {
     );
     if (matches) {
       const mimeType = matches[1];
+      if (
+        !["image/png", "image/jpeg", "image/jpg", "image/gif"].includes(
+          mimeType
+        )
+      ) {
+        return new Response(
+          JSON.stringify({
+            message: "Formato de imagen no soportado. Usa PNG, JPG o GIF.",
+            status: 400,
+          }),
+          { status: 400 }
+        );
+      }
       const base64Data = matches[2];
       // Nombre de archivo sugerido
       const ext = mimeType.split("/")[1] || "png";
