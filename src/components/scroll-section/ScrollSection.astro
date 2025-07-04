@@ -2,6 +2,8 @@
 import style from "../../styles/scrollSection.module.css";
 import animated from "../../styles/fadeAnimations.module.css";
 import Image from "astro/components/Image.astro";
+import LucideMouse from "../../assets/icons/lucide/LucideMouse.astro";
+import LucideChevronDown from "../../assets/icons/lucide/LucideChevronDown.astro";
 ---
 
 <div
@@ -31,8 +33,11 @@ import Image from "astro/components/Image.astro";
       </div>
 
       <!-- <img src="/mikhuy_no_bg.png" alt="gta vi no bg" /> -->
-      <div id="hero_img_copy" class={`${style.hero_img_copy} text-4xl`}>
-        <p>¡Haz scroll para abajo para revelar!</p>
+      <div id="hero_img_copy" class={`${style.hero_img_copy}`}>
+        <span class="animate-bounce"
+          ><LucideMouse />
+          <LucideChevronDown />
+        </span>
       </div>
     </div>
     <div id="fade_overlay" class={`${style.fade_overlay}`}></div>
@@ -60,6 +65,9 @@ import Image from "astro/components/Image.astro";
         Tu <br />
         Cafetín
       </h2>
+      <span class="w-full flex items-center justify-center mt-8 text-6xl animate-bounce">
+        <LucideChevronDown />
+      </span>
     </div>
   </section>
 </section>

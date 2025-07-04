@@ -47,14 +47,17 @@
   will-change: opacity;
 }
 
-.hero_img_copy p {
-  font-size: 1.5rem;
+.hero_img_copy span {
+  font-size: 2rem;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .fade_overlay {
