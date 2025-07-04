@@ -126,3 +126,26 @@
     width: 100%;
   }
 }
+
+@media (max-height: 600px) {
+  .hero div h2 {
+    line-height: 1.2;
+    font-size: 2.5rem;
+  }
+
+  .overlay_copy {
+    height: 100%;
+    bottom: -40%;
+  }
+  .overlay_copy span {
+    margin-top: 1rem;
+  }
+
+  .overlay {
+    top: -20px;
+  }
+
+  .fade_overlay {
+    height: 150vh;
+  }
+}
