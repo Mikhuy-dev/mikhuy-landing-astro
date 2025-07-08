@@ -4,6 +4,24 @@ import brevo from "@getbrevo/brevo";
 
 export async function POST({ request }: { request: Request }) {
   const { name, email, phone, message, imageBase64 } = await request.json();
+  // Validar campos requeridos
+  if (!name || !email || !message || !phone || !imageBase64) {
+    console.error("Campos requeridos faltantes:", {
+      name,
+      email,
+      phone,
+      message,
+      imageBase64,
+    });
+    return new Response(
+      JSON.stringify({
+        message:
+          "Pueden faltar algunos de los campos requeridos: nombre, email, teléfono, mensaje o imagen.",
+        status: 400,
+      }),
+      { status: 400 }
+    );
+  }
   const apiInstance = new brevo.TransactionalEmailsApi();
   apiInstance.setApiKey(
     brevo.TransactionalEmailsApiApiKeys.apiKey,
